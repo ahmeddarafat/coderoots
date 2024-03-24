@@ -1,18 +1,18 @@
 import 'package:coderoots/core/network/api_result.dart';
-import 'package:coderoots/features/doctors_restful/data/models/response.dart';
 import 'package:coderoots/features/doctors_restful/data/repos/doctors_repo.dart';
 import 'package:coderoots/features/doctors_restful/domain/mapper/mapper.dart';
 import 'package:coderoots/features/doctors_restful/domain/usecases/base_usecase.dart';
 
 import '../../data/models/request.dart';
+import '../entities/doctor.dart';
 
-class DoctorsUseCase implements BaseUseCase<DoctorsFilter, List<Doctor>> {
+class DoctorsUseCase implements BaseUseCase<DoctorsFilter, List<DoctorEntity>> {
   final DoctorRepo repository;
 
   DoctorsUseCase(this.repository);
 
   @override
-  Future<ApiResult<List<Doctor>>> execute(DoctorsFilter input) async {
+  Future<ApiResult<List<DoctorEntity>>> execute(DoctorsFilter input) async {
     final request = DoctorsFilteringRequest(
       priceFrom: input.priceFrom,
       priceTo: input.priceTo,
@@ -20,8 +20,8 @@ class DoctorsUseCase implements BaseUseCase<DoctorsFilter, List<Doctor>> {
       cityId: "65ad623ec4d5a2a836c60ff6",
     );
     final repsonse = await repository.getDoctors(request);
-    
-    late ApiResult<List<Doctor>> result;
+
+    late ApiResult<List<DoctorEntity>> result;
     repsonse.when(
       success: (data) {
         result = ApiResult.success(data.toEntity());

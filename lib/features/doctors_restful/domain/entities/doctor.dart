@@ -1,14 +1,14 @@
-class Doctor{
+class DoctorEntity{
   final String name;
   final String email;
   final String mobile;
   final String address;
-  final Category category;
+  final String category;
   final double price;
   final String biography;
   final String cities;
 
-  Doctor({
+  DoctorEntity({
     required this.name,
     required this.email,
     required this.mobile,
@@ -18,10 +18,4 @@ class Doctor{
     required this.biography,
     required this.cities,
   });
-}
-
-class Category {
-  final String name;
-
-  Category({required this.name});
 }

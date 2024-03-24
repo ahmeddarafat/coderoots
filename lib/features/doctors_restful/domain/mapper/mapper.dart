@@ -1,15 +1,15 @@
 import 'package:coderoots/features/doctors_restful/data/models/response.dart';
+import 'package:coderoots/features/doctors_restful/domain/entities/doctor.dart';
 
 extension DoctorMapper on DoctorsResponse {
-  List<Doctor> toEntity() {
+  List<DoctorEntity> toEntity() {
     return data.map((doctor) {
-      return Doctor(
-        firstName: doctor.firstName,
-        lastName: doctor.lastName,
+      return DoctorEntity(
+        name: "${doctor.firstName} ${doctor.lastName}",
         email: doctor.email,
         mobile: doctor.mobile,
         address: doctor.address,
-        category: doctor.category,
+        category: doctor.category.name,
         price: doctor.price,
         biography: doctor.biography,
         cities: doctor.cities,

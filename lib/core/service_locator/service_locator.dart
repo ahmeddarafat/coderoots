@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../cache/app_prefs.dart';
 import '../network/dio_service.dart';
 
+import '../network/grahp_service.dart';
 import '../network/network_info.dart';
 
 final GetIt getIt = GetIt.instance;
@@ -20,6 +21,8 @@ Future<void> initServiceLocator() async {
 
   /// api service
   getIt.registerLazySingleton(() => DioService());
+  getIt.registerLazySingleton(() => GQService());
+
 
   /// network checker
   getIt.registerLazySingleton(

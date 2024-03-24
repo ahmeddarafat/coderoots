@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:coderoots/core/network/api_constants.dart';
 import 'package:coderoots/core/network/api_result.dart';
 import 'package:coderoots/core/network/dio_service.dart';
@@ -21,6 +23,7 @@ class DoctorRepo {
       final doctorsResponse = DoctorsResponse.fromJson(response.data);
       return ApiResult.success(doctorsResponse);
     } catch (error) {
+      log(error.toString(), name: "DoctorRepo");
       final handler = ErrorHandler.handle(error);
       return ApiResult.failure(handler.failure);
     }

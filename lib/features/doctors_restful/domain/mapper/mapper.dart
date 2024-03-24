@@ -9,7 +9,7 @@ extension DoctorMapper on DoctorsResponse {
         email: doctor.email,
         mobile: doctor.mobile,
         address: doctor.address,
-        category: doctor.category.name,
+        category: doctor.category[0].name,
         price: doctor.price,
         biography: doctor.biography,
         cities: doctor.cities,

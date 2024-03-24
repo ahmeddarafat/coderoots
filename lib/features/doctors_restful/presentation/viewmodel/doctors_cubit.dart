@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:coderoots/features/doctors_restful/domain/usecases/doctor_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,6 +20,7 @@ class DoctorsCubit extends Cubit<DoctorsState> {
         emit(DoctorsState.success(data));
       },
       failure: (error) {
+        log(error.toString(), name: "DoctorsCubit");
         emit(DoctorsState.error(error.message));
       },
     );

@@ -49,9 +49,9 @@ class _DoctorPageState extends State<DoctorPage> {
                   success: (_) {
                     return ListView.separated(
                       itemCount: bloc.doctors.length,
-                      separatorBuilder: (_, __) => const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10),
-                        child: Divider(),
+                      separatorBuilder: (_, __) =>  Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: Divider(color: Colors.grey[300],),
                       ),
                       itemBuilder: (_, index) {
                         final doctor = bloc.doctors[index];

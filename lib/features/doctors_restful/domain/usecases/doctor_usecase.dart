@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:coderoots/core/network/api_result.dart';
 import 'package:coderoots/features/doctors_restful/data/repos/doctors_repo.dart';
 import 'package:coderoots/features/doctors_restful/domain/mapper/mapper.dart';
@@ -27,6 +29,7 @@ class DoctorsUseCase implements BaseUseCase<DoctorsFilter, List<DoctorEntity>> {
         result = ApiResult.success(data.toEntity());
       },
       failure: (error) {
+        log(error.toString(), name: "DoctorsUseCase");
         result = ApiResult.failure(error);
       },
     );

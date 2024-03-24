@@ -19,20 +19,22 @@ Map<String, dynamic> _$DoctorsResponseToJson(DoctorsResponse instance) =>
     };
 
 Doctor _$DoctorFromJson(Map<String, dynamic> json) => Doctor(
-      firstName: json['firstName'] as String,
-      lastName: json['lastName'] as String,
+      firstName: json['first_name'] as String,
+      lastName: json['last_name'] as String,
       email: json['email'] as String,
       mobile: json['mobile'] as String,
       address: json['address'] as String,
-      category: Category.fromJson(json['category'] as Map<String, dynamic>),
+      category: (json['category'] as List<dynamic>)
+          .map((e) => Category.fromJson(e as Map<String, dynamic>))
+          .toList(),
       price: (json['price'] as num).toDouble(),
       biography: json['biography'] as String,
       cities: json['cities'] as String,
     );
 
 Map<String, dynamic> _$DoctorToJson(Doctor instance) => <String, dynamic>{
-      'firstName': instance.firstName,
-      'lastName': instance.lastName,
+      'first_name': instance.firstName,
+      'last_name': instance.lastName,
       'email': instance.email,
       'mobile': instance.mobile,
       'address': instance.address,

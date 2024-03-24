@@ -1,3 +1,6 @@
+import 'package:coderoots/features/doctors_restful/data/repos/doctors_repo.dart';
+import 'package:coderoots/features/doctors_restful/domain/usecases/doctor_usecase.dart';
+import 'package:coderoots/features/doctors_restful/presentation/viewmodel/doctors_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -24,4 +27,10 @@ Future<void> initServiceLocator() async {
       InternetConnectionChecker(),
     ),
   );
+
+  /// doctor restful
+  getIt.registerLazySingleton(() => DoctorRepo(getIt()));
+  getIt.registerLazySingleton(() => DoctorsUseCase(getIt()));
+  getIt.registerLazySingleton(() => DoctorsCubit(getIt()));
+  
 }

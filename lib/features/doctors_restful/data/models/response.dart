@@ -14,12 +14,14 @@ class DoctorsResponse {
 
 @JsonSerializable()
 class Doctor {
+  @JsonKey(name: 'first_name')
   final String firstName;
+  @JsonKey(name: 'last_name')
   final String lastName;
   final String email;
   final String mobile;
   final String address;
-  final Category category;
+  final List<Category> category;
   final double price;
   final String biography;
   final String cities;

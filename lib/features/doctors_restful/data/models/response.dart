@@ -4,9 +4,9 @@ part 'response.g.dart';
 
 @JsonSerializable()
 class DoctorsResponse {
-  final List<Doctor> doctors;
+  final List<Doctor> data;
 
-  DoctorsResponse({required this.doctors});
+  DoctorsResponse({required this.data});
 
   factory DoctorsResponse.fromJson(Map<String, dynamic> json) =>
       _$DoctorsResponseFromJson(json);

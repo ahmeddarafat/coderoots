@@ -1,6 +1,6 @@
 class ApiConstants {
   ApiConstants._();
-  static const baseUrl = "";
+  static const baseUrl = "https://imake-app.com:4001/api/doctors";
 }
 
 class ApiEndPoints {

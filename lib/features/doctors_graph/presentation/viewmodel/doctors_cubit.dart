@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:coderoots/features/doctors_restful/domain/usecases/doctor_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../domain/usecases/doctor_usecase.dart';
 import '../../domain/entities/doctor.dart';
 import 'doctors_state.dart';
 

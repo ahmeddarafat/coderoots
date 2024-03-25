@@ -8,7 +8,7 @@ import 'products_state.dart';
 
 class ProductsCubit extends Cubit<ProductsState> {
   final ProductsUseCase _useCase;
-  late List<ProductEntity> doctors;
+  late List<ProductEntity> products;
   ProductsCubit(this._useCase) : super(const ProductsState.initial());
 
   Future<void> getDoctors(String id) async {
@@ -16,7 +16,7 @@ class ProductsCubit extends Cubit<ProductsState> {
     final result = await _useCase.execute(id);
     result.when(
       success: (data) {
-        doctors = data;
+        products = data;
         emit(ProductsState.success(data));
       },
       failure: (error) {

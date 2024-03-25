@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import '../../../../core/network/api_result.dart';
 import '../mapper/mapper.dart';
-import '../../data/models/request.dart';
 import '../../data/repos/products_repo.dart';
 import '../entities/product.dart';
 import 'base_usecase.dart';

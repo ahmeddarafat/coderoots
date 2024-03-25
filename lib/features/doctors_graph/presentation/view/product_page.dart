@@ -22,6 +22,7 @@ class _ProductsPageState extends State<ProductsPage> {
     super.initState();
     bloc = getIt<ProductsCubit>();
     bloc.getDoctors("18");
+
   }
 
   @override
@@ -47,6 +48,7 @@ class _ProductsPageState extends State<ProductsPage> {
                     );
                   },
                   success: (_) {
+                    bloc.products.length;
                     return ListView.separated(
                       itemCount: 10,
                       separatorBuilder: (_, __) =>  Padding(
@@ -54,7 +56,7 @@ class _ProductsPageState extends State<ProductsPage> {
                         child: Divider(color: Colors.grey[300],),
                       ),
                       itemBuilder: (_, index) {
-                        final doctor = bloc.doctors[index];
+                        final doctor = bloc.products[index];
                         return ProductCard(product: doctor);
                       },
                     );

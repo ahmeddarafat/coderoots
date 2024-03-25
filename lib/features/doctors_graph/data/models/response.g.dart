@@ -39,8 +39,8 @@ Map<String, dynamic> _$ProductToJson(Product instance) => <String, dynamic>{
     };
 
 Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
-      name: json['name_en'] as String,
-      id: json['id'] as String,
+      name: json['name_en'] as String?,
+      id: json['id'] as int?,
     );
 
 Map<String, dynamic> _$CategoryToJson(Category instance) => <String, dynamic>{
@@ -49,7 +49,7 @@ Map<String, dynamic> _$CategoryToJson(Category instance) => <String, dynamic>{
     };
 
 Attributes _$AttributesFromJson(Map<String, dynamic> json) => Attributes(
-      id: json['id'] as String,
+      id: json['id'] as int?,
     );
 
 Map<String, dynamic> _$AttributesToJson(Attributes instance) =>

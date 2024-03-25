@@ -25,7 +25,7 @@ class ProductRepo {
       );
 
       // log(response.data.toString(), name: "DoctorRepo");
-      final productsResponse = ProductsResponse.fromJson(response.data ?? {});
+      final productsResponse = ProductsResponse.fromJson(response.data ?? {"products": []});
       return ApiResult.success(productsResponse);
     } catch (error) {
       log(error.toString(), name: "DoctorRepo");

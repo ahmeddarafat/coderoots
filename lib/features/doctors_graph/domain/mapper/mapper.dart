@@ -9,9 +9,9 @@ extension DoctorMapper on ProductsResponse {
         nameEn: doctor.nameEn ?? "Unknown",
         nameAr: doctor.nameAr ?? "Unknown",
         adminComment: doctor.adminComment ?? "Unknown",
-        attributesId: doctor.attributes?.id ?? "Unknown",
+        attributesId: doctor.attributes?.id.toString() ?? "Unknown",
         categoryName: doctor.category?.name ?? "Unknown",
-        categoryId: doctor.category?.id ?? "Unknown",
+        categoryId: doctor.category?.id.toString() ?? "Unknown",
         
       );
     }).toList();

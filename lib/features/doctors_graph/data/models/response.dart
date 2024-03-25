@@ -37,8 +37,8 @@ class Product {
 @JsonSerializable()
 class Category {
   @JsonKey(name: 'name_en')
-  final String name;
-  final String id;
+  final String? name;
+  final int? id;
 
   Category({required this.name, required this.id});
 
@@ -48,7 +48,7 @@ class Category {
 
 @JsonSerializable()
 class Attributes {
-  final String id;
+  final int? id;
 
   Attributes({required this.id});
 

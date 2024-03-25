@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/service_locator/service_locator.dart';
-import 'features/doctors_graph/presentation/viewmodel/doctors_cubit.dart'
+import 'features/doctors_graph/presentation/viewmodel/prducts_cubit.dart'
     as gql;
 
 class MyApp extends StatelessWidget {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           create: (context) => getIt<DoctorsCubit>(),
         ),
         BlocProvider(
-          create: (context) => getIt<gql.DoctorsCubit>(),
+          create: (context) => getIt<gql.ProductsCubit>(),
         ),
       ],
       child: const MaterialApp(

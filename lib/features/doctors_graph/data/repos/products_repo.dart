@@ -6,27 +6,27 @@ import 'package:coderoots/features/doctors_graph/data/queries/queries.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 
 import '../../../../core/network/error_handler.dart' as eh;
-import '../models/request.dart';
 import '../models/response.dart';
 
-class DoctorRepo {
+class ProductRepo {
   final GQService _gqService;
 
-  DoctorRepo(this._gqService);
+  ProductRepo(this._gqService);
 
-  Future<ApiResult<DoctorsResponse>> getDoctors(
-      DoctorsFilteringRequest request) async {
+  Future<ApiResult<ProductsResponse>> getDoctors(String id) async {
     try {
-      final response = await _gqService.client.value.query(
+      final QueryResult<Object?> response = await _gqService.client.query(
         QueryOptions(
           document: gql(
             MyQueries.filterDoctor(),
           ),
+          errorPolicy: ErrorPolicy.all,
         ),
       );
 
-      final doctorsResponse = DoctorsResponse.fromJson(response.data!);
-      return ApiResult.success(doctorsResponse);
+      // log(response.data.toString(), name: "DoctorRepo");
+      final productsResponse = ProductsResponse.fromJson(response.data ?? {});
+      return ApiResult.success(productsResponse);
     } catch (error) {
       log(error.toString(), name: "DoctorRepo");
       final handler = eh.ErrorHandler.handle(error);

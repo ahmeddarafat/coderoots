@@ -3,51 +3,55 @@ import 'package:json_annotation/json_annotation.dart';
 part 'response.g.dart';
 
 @JsonSerializable()
-class DoctorsResponse {
-  final List<Doctor> data;
+class ProductsResponse {
+  final List<Product> products;
 
-  DoctorsResponse({required this.data});
+  ProductsResponse({required this.products});
 
-  factory DoctorsResponse.fromJson(Map<String, dynamic> json) =>
-      _$DoctorsResponseFromJson(json);
+  factory ProductsResponse.fromJson(Map<String, dynamic> json) =>
+      _$ProductsResponseFromJson(json);
 }
 
 @JsonSerializable()
-class Doctor {
-  @JsonKey(name: 'first_name')
-  final String firstName;
-  @JsonKey(name: 'last_name')
-  final String lastName;
-  final String email;
-  final String mobile;
-  final String address;
-  final List<Category> category;
-  final double price;
-  final String biography;
-  final String cities;
+class Product {
+  @JsonKey(name: "name_en")
+  final String? nameEn;
+  @JsonKey(name: "name_ar")
+  final String? nameAr;
+  @JsonKey(name: "admin_comment")
+  final String? adminComment;
+  final Category? category;
+  final Attributes? attributes;
 
-  Doctor({
-    required this.firstName,
-    required this.lastName,
-    required this.email,
-    required this.mobile,
-    required this.address,
+  Product({
+    required this.nameEn,
+    required this.nameAr,
+    required this.adminComment,
     required this.category,
-    required this.price,
-    required this.biography,
-    required this.cities,
+    required this.attributes,
   });
 
-  factory Doctor.fromJson(Map<String, dynamic> json) => _$DoctorFromJson(json);
+  factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
 }
 
 @JsonSerializable()
 class Category {
   @JsonKey(name: 'name_en')
   final String name;
+  final String id;
 
-  Category({required this.name});
+  Category({required this.name, required this.id});
 
   factory Category.fromJson(Map<String, dynamic> json) =>
       _$CategoryFromJson(json);
+}
+
+@JsonSerializable()
+class Attributes {
+  final String id;
+
+  Attributes({required this.id});
+
+  factory Attributes.fromJson(Map<String, dynamic> json) =>
+      _$AttributesFromJson(json);
 }

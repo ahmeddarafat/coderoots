@@ -1,5 +1,5 @@
 class MyQueries {
-  static String filterDoctor() => '''
+  static String filterDoctor() => r'''
     query {
       products(Function: "Filters"){
         name_ar

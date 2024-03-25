@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'doctors_state.dart';
+part of 'products_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,12 +15,12 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$DoctorsState {
+mixin _$ProductsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DoctorEntity> doctors) success,
+    required TResult Function(List<ProductEntity> doctors) success,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$DoctorsState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DoctorEntity> doctors)? success,
+    TResult? Function(List<ProductEntity> doctors)? success,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$DoctorsState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DoctorEntity> doctors)? success,
+    TResult Function(List<ProductEntity> doctors)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -71,12 +71,12 @@ mixin _$DoctorsState {
 /// @nodoc
 abstract class $DoctorsStateCopyWith<$Res> {
   factory $DoctorsStateCopyWith(
-          DoctorsState value, $Res Function(DoctorsState) then) =
-      _$DoctorsStateCopyWithImpl<$Res, DoctorsState>;
+          ProductsState value, $Res Function(ProductsState) then) =
+      _$DoctorsStateCopyWithImpl<$Res, ProductsState>;
 }
 
 /// @nodoc
-class _$DoctorsStateCopyWithImpl<$Res, $Val extends DoctorsState>
+class _$DoctorsStateCopyWithImpl<$Res, $Val extends ProductsState>
     implements $DoctorsStateCopyWith<$Res> {
   _$DoctorsStateCopyWithImpl(this._value, this._then);
 
@@ -126,7 +126,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DoctorEntity> doctors) success,
+    required TResult Function(List<ProductEntity> doctors) success,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -137,7 +137,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DoctorEntity> doctors)? success,
+    TResult? Function(List<ProductEntity> doctors)? success,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -148,7 +148,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DoctorEntity> doctors)? success,
+    TResult Function(List<ProductEntity> doctors)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -196,7 +196,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements DoctorsState {
+abstract class _Initial implements ProductsState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -240,7 +240,7 @@ class _$LoadingStateImpl implements LoadingState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DoctorEntity> doctors) success,
+    required TResult Function(List<ProductEntity> doctors) success,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -251,7 +251,7 @@ class _$LoadingStateImpl implements LoadingState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DoctorEntity> doctors)? success,
+    TResult? Function(List<ProductEntity> doctors)? success,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -262,7 +262,7 @@ class _$LoadingStateImpl implements LoadingState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DoctorEntity> doctors)? success,
+    TResult Function(List<ProductEntity> doctors)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -310,7 +310,7 @@ class _$LoadingStateImpl implements LoadingState {
   }
 }
 
-abstract class LoadingState implements DoctorsState {
+abstract class LoadingState implements ProductsState {
   const factory LoadingState() = _$LoadingStateImpl;
 }
 
@@ -320,7 +320,7 @@ abstract class _$$SuccessStateImplCopyWith<$Res> {
           _$SuccessStateImpl value, $Res Function(_$SuccessStateImpl) then) =
       __$$SuccessStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<DoctorEntity> doctors});
+  $Res call({List<ProductEntity> doctors});
 }
 
 /// @nodoc
@@ -340,7 +340,7 @@ class __$$SuccessStateImplCopyWithImpl<$Res>
       null == doctors
           ? _value._doctors
           : doctors // ignore: cast_nullable_to_non_nullable
-              as List<DoctorEntity>,
+              as List<ProductEntity>,
     ));
   }
 }
@@ -348,12 +348,12 @@ class __$$SuccessStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SuccessStateImpl implements SuccessState {
-  const _$SuccessStateImpl(final List<DoctorEntity> doctors)
+  const _$SuccessStateImpl(final List<ProductEntity> doctors)
       : _doctors = doctors;
 
-  final List<DoctorEntity> _doctors;
+  final List<ProductEntity> _doctors;
   @override
-  List<DoctorEntity> get doctors {
+  List<ProductEntity> get doctors {
     if (_doctors is EqualUnmodifiableListView) return _doctors;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_doctors);
@@ -387,7 +387,7 @@ class _$SuccessStateImpl implements SuccessState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DoctorEntity> doctors) success,
+    required TResult Function(List<ProductEntity> doctors) success,
     required TResult Function(String message) error,
   }) {
     return success(doctors);
@@ -398,7 +398,7 @@ class _$SuccessStateImpl implements SuccessState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DoctorEntity> doctors)? success,
+    TResult? Function(List<ProductEntity> doctors)? success,
     TResult? Function(String message)? error,
   }) {
     return success?.call(doctors);
@@ -409,7 +409,7 @@ class _$SuccessStateImpl implements SuccessState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DoctorEntity> doctors)? success,
+    TResult Function(List<ProductEntity> doctors)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -457,11 +457,11 @@ class _$SuccessStateImpl implements SuccessState {
   }
 }
 
-abstract class SuccessState implements DoctorsState {
-  const factory SuccessState(final List<DoctorEntity> doctors) =
+abstract class SuccessState implements ProductsState {
+  const factory SuccessState(final List<ProductEntity> doctors) =
       _$SuccessStateImpl;
 
-  List<DoctorEntity> get doctors;
+  List<ProductEntity> get doctors;
   @JsonKey(ignore: true)
   _$$SuccessStateImplCopyWith<_$SuccessStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -533,7 +533,7 @@ class _$ErrorStateImpl implements ErrorState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DoctorEntity> doctors) success,
+    required TResult Function(List<ProductEntity> doctors) success,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -544,7 +544,7 @@ class _$ErrorStateImpl implements ErrorState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DoctorEntity> doctors)? success,
+    TResult? Function(List<ProductEntity> doctors)? success,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -555,7 +555,7 @@ class _$ErrorStateImpl implements ErrorState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DoctorEntity> doctors)? success,
+    TResult Function(List<ProductEntity> doctors)? success,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -603,7 +603,7 @@ class _$ErrorStateImpl implements ErrorState {
   }
 }
 
-abstract class ErrorState implements DoctorsState {
+abstract class ErrorState implements ProductsState {
   const factory ErrorState(final String message) = _$ErrorStateImpl;
 
   String get message;

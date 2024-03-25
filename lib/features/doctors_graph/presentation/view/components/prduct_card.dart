@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/extension/sizedbox_extensions.dart';
 import '../../../../../core/widget/public_text.dart';
-import '../../../domain/entities/doctor.dart';
+import '../../../domain/entities/product.dart';
 
 
-class DoctorCard extends StatelessWidget {
-  const DoctorCard({
+class ProductCard extends StatelessWidget {
+  const ProductCard({
     super.key,
-    required this.doctor,
+    required this.product,
   });
 
-  final DoctorEntity doctor;
+  final ProductEntity product;
 
   @override
   Widget build(BuildContext context) {
@@ -24,42 +24,32 @@ class DoctorCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             PublicText(
-              text: "Name: ${doctor.name}",
+              text: "English Name: ${product.nameEn}",
               size: 18,
             ),
             4.ph,
             PublicText(
-              text: "Email: ${doctor.email}",
+              text: "Arabic Name: ${product.nameAr}",
               size: 18,
             ),
             4.ph,
             PublicText(
-              text: "Mobile: ${doctor.mobile}",
+              text: "Admin Comment: ${product.adminComment}",
               size: 18,
             ),
             4.ph,
             PublicText(
-              text: "Address: ${doctor.address}",
+              text: "Attributes Id: ${product.attributesId}",
               size: 18,
             ),
             4.ph,
             PublicText(
-              text: "Category: ${doctor.category}",
+              text: "Category Name: ${product.categoryName}",
               size: 18,
             ),
             4.ph,
             PublicText(
-              text: "Price: ${doctor.price}",
-              size: 18,
-            ),
-            4.ph,
-            PublicText(
-              text: "Biography: ${doctor.biography}",
-              size: 18,
-            ),
-            4.ph,
-            PublicText(
-              text: "City: ${doctor.cities}",
+              text: "Category Id: ${product.categoryId}",
               size: 18,
             ),
             4.ph,

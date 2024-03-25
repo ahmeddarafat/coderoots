@@ -1,19 +1,18 @@
 
 import '../../data/models/response.dart';
-import '../entities/doctor.dart';
+import '../entities/product.dart';
 
-extension DoctorMapper on DoctorsResponse {
-  List<DoctorEntity> toEntity() {
-    return data.map((doctor) {
-      return DoctorEntity(
-        name: "${doctor.firstName} ${doctor.lastName}",
-        email: doctor.email,
-        mobile: doctor.mobile,
-        address: doctor.address,
-        category: doctor.category[0].name,
-        price: doctor.price,
-        biography: doctor.biography,
-        cities: doctor.cities,
+extension DoctorMapper on ProductsResponse {
+  List<ProductEntity> toEntity() {
+    return products.map((doctor) {
+      return ProductEntity(
+        nameEn: doctor.nameEn ?? "Unknown",
+        nameAr: doctor.nameAr ?? "Unknown",
+        adminComment: doctor.adminComment ?? "Unknown",
+        attributesId: doctor.attributes?.id ?? "Unknown",
+        categoryName: doctor.category?.name ?? "Unknown",
+        categoryId: doctor.category?.id ?? "Unknown",
+        
       );
     }).toList();
   }

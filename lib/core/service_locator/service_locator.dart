@@ -7,11 +7,9 @@ import '../network/dio_service.dart';
 import '../../features/doctors_restful/data/repos/doctors_repo.dart';
 import '../../features/doctors_restful/domain/usecases/doctor_usecase.dart';
 import '../../features/doctors_restful/presentation/viewmodel/doctors_cubit.dart';
-import '../../features/doctors_graph/data/repos/doctors_repo.dart' as gql;
-import '../../features/doctors_graph/domain/usecases/doctor_usecase.dart'
-    as gql;
-import '../../features/doctors_graph/presentation/viewmodel/doctors_cubit.dart'
-    as gql;
+import '../../features/doctors_graph/data/repos/products_repo.dart';
+import '../../features/doctors_graph/domain/usecases/product_usecase.dart';
+import '../../features/doctors_graph/presentation/viewmodel/prducts_cubit.dart';
 import '../network/grahp_service.dart';
 import '../network/network_info.dart';
 
@@ -41,7 +39,7 @@ Future<void> initServiceLocator() async {
   getIt.registerLazySingleton(() => DoctorsCubit(getIt()));
 
   /// doctor graph
-  getIt.registerLazySingleton(() => gql.DoctorRepo(getIt()));
-  getIt.registerLazySingleton(() => gql.DoctorsUseCase(getIt()));
-  getIt.registerLazySingleton(() => gql.DoctorsCubit(getIt()));
+  getIt.registerLazySingleton(() => ProductRepo(getIt()));
+  getIt.registerLazySingleton(() => ProductsUseCase(getIt()));
+  getIt.registerLazySingleton(() => ProductsCubit(getIt()));
 }

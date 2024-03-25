@@ -8,7 +8,7 @@ import 'doctors_state.dart';
 
 class DoctorsCubit extends Cubit<DoctorsState> {
   final DoctorsUseCase _useCase;
-  late final List<DoctorEntity> doctors;
+  late List<DoctorEntity> doctors;
   DoctorsCubit(this._useCase) : super(const DoctorsState.initial());
 
   Future<void> getDoctors(double priceFrom, double priceTo) async {
